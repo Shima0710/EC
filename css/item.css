@@ -1,0 +1,488 @@
+/* Google Fontのインポート */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@400;500;600;700;800;900&display=swap');
+
+/* 全般のリセットとスタイル */
+* {
+    font-family: 'Big Shoulders Text', sans-serif; /* フォントファミリーを指定 */
+    padding: 0; /* パディングをリセット */
+    margin: 0; /* マージンをリセット */
+    box-sizing: border-box; /* ボックスサイジングを指定 */
+    scroll-behavior: smooth; /* スムーズスクロールを有効化 */
+    scroll-padding-top: 2rem; /* スクロール位置の調整 */
+    text-decoration: none; /* テキストの装飾を無効化 */
+    list-style: none; /* リストのマーカーを無効化 */
+    color: #ff6201; /* 文字の色を指定 */
+}
+
+/* ルート要素のカスタムプロパティ */
+:root {
+    --main-color: rgb(255, 98, 1); /* メインの色を指定 */
+    --text-color: rgb(255, 116, 29); /* テキストの色を指定 */
+    --bg-color: #ffffff; /* 背景色を指定 */
+    --container-color: #dbdbdb; /* コンテナの色を指定 */
+}
+
+body {
+    background-color: #ffffff;
+    scroll-behavior: smooth;
+}
+
+/* フェードアウトアニメーション */
+.fade-out {
+    transition: opacity 0.6s ease-out;
+    opacity: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.container {
+    max-width: 67.188rem;
+    margin: auto;
+    padding: 0 1rem;
+    color: #ff6201; /* 追加 */
+}
+
+/* ヘッダー */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #ff6201;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    font-size: 1.025rem;
+    color: #ff6201;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+
+
+
+
+/* いいねアイコンのスタイル */
+#like-icon2 {
+    position: relative; /* 相対位置に配置 */
+    font-size: 1.8rem; /* フォントサイズを設定 */
+    right: 1.5rem;
+    color: #ff6201; /* 主要な色を変数から取得 */
+    cursor: pointer; /* カーソルをポインターに設定 */
+    z-index: 999;
+}
+
+/* いいねアイコンのスタイル */
+#like-icon {
+    position: relative; /* 相対位置に配置 */
+    font-size: 1.8rem; /* フォントサイズを設定 */
+    color: #ffffff; /* 主要な色を変数から取得 */
+    cursor: pointer; /* カーソルをポインターに設定 */
+    z-index: 999;
+}
+
+/* いいねアイコンに表示する数量のスタイル */
+#like-icon[data-quantity="0"]::after {
+    content: ""; /* コンテンツを空に設定 */
+}
+
+#like-icon[data-quantity]::after {
+    content: attr(data-quantity); /* いいね数量を表示 */
+    position: absolute; /* 絶対位置に配置 */
+    top: -10px; /* 上部に配置 */
+    right: 20px; /* 右端に配置 */
+    width: 1.25rem; /* 幅を設定 */
+    height: 1.25rem; /* 高さを設定 */
+    background: #000000; /* 主要な色を設定 */
+    border-radius: 50%; /* 角を丸める */
+    color: #ffffff; /* テキストの色を設定 */
+    font-size: 0.75rem; /* フォントサイズを設定 */
+    font-weight: 500; /* フォントの太さを設定 */
+    display: flex; /* Flexboxを使用 */
+    align-items: center; /* アイテムの中央揃え */
+    justify-content: center; /* アイテムの中央揃え */
+}
+
+/* カートアイコンのスタイル */
+#cart-icon {
+    position: relative;
+    font-size: 1.8rem;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+/* カートアイコンに表示する数量のスタイル */
+#cart-icon[data-quantity="0"]::after {
+    content: "";
+}
+
+#cart-icon[data-quantity]::after {
+    content: attr(data-quantity);
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: #ff6201;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    line-height: 1;
+}
+
+/* 共通の数量表示スタイル */
+.icons i[data-quantity]::after {
+    content: attr(data-quantity);
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: #ff6201;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    line-height: 1;
+}
+
+/* Add to Cartボタンといいねアイコンの配置 */
+.add-btn {
+    display: flex;
+    align-items: center;
+}
+
+.add-to-cart {
+    margin-right: 10px; /* ボタンの間隔を調整 */
+}
+
+
+
+
+
+
+/* 商品リスト */
+#productList {
+    display: flex; /* 横並びにする */
+    flex-wrap: wrap; /* 複数行にわたる場合に折り返す */
+    gap: 2rem; /* 要素間の間隔を設定 */
+    justify-content: space-between; /* 要素を均等に配置 */
+    padding: 0 1rem; /* 追加 */
+}
+
+.products {
+    flex: 1 0 calc(50% - 1rem); /* 幅を50%に設定し、間隔を考慮して調整 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product-img {
+    width: 100%;
+    max-width: 25rem;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.product-title {
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    font-weight: bold;
+}
+
+/* 商品詳細 */
+.product-container {
+    display: grid; /* グリッドレイアウトに変更 */
+    grid-template-columns: repeat(2, 1fr); /* 2列に変更 */
+    gap: 2rem; /* 間隔を設定 */
+    padding: 10% 1.25rem 1.25rem 1.25rem; /* 上部から10%のパディングを追加 */
+    align-items: flex-start; /* 上端揃えに変更 */
+}
+
+.product-details img {
+    width: 100%;
+    max-width: 25rem;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.size-select {
+    color: #ff6201;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.add-btn a {
+    background-color: #ff6201;
+    color: #ffffff;
+    font-size: 2rem;
+    letter-spacing: 0.0625rem;
+    padding: 0.625rem;
+    cursor: pointer;
+}
+
+/* ボタン押下時のアニメーション */
+@keyframes clickAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+.add-to-cart.clicked {
+    animation: clickAnimation 0.4s ease;
+}
+
+/* カートアイコンに商品が飛び込むアニメーション */
+@keyframes flyToCart {
+    from { opacity: 1; transform: translate(0, 0) scale(1); }
+    to { opacity: 0; transform: translate(-300px, -100px) scale(0.1); }
+}
+
+.flying-item {
+    position: absolute;
+    z-index: 9999;
+    animation: flyToCart 0.7s ease forwards;
+}
+
+.comment {
+    margin-top: 1rem;
+}
+
+/* 商品情報コンテナ */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 配置を均等に */
+    align-items: start; /* 左揃え */
+}
+
+/* 商品タイトルと価格のスタイル */
+.product-info h2,
+.product-info p {
+    margin: 1.5rem 0; /* 垂直方向のマージンを設定 */
+}
+
+/* サイズ選択セクション */
+.size-select {
+    margin: 1rem 0; /* サイズ選択周りのマージンを増やす */
+}
+
+.size-select label {
+    display: block; /* ラベルをブロック要素に */
+    margin-bottom: 0.5rem; /* ラベル下のマージン */
+}
+
+.size-select select {
+    width: 100%; /* セレクトボックスの幅を調整 */
+    padding: 0.5rem; /* パディングで内部スペースを確保 */
+    border: 1px solid #ccc; /* 境界線を明確に */
+}
+
+/* カートに追加ボタン */
+.add-btn a {
+    display: inline-block;
+    background-color: var(--main-color); /* 主色を使用 */
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 1rem; /* 上部のマージン */
+    border-radius: 5px; /* 角の丸み */
+    cursor: pointer; /* カーソルをポインターに */
+}
+
+/* コメントセクションのスタイル */
+.comment {
+    margin-top: 1rem; /* コメントまでの間隔 */
+}
+
+/* 関連商品 */
+.related-products {
+    display: flex; /* 横並びにする */
+    flex-wrap: wrap; /* 複数行にわたる場合に折り返す */
+    gap: 2rem; /* 要素間の間隔を設定 */
+}
+
+.item-products {
+    flex: 1 0 calc(50% - 1rem); /* 幅を50%に設定し、間隔を考慮して調整 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.item-products img {
+    width: 100%;
+    max-width: 15rem;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.item-products .product-info {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .item-products {
+        flex: 1 0 100%; /* 幅を100%に設定して1列に並べる */
+    }
+}
+
+/* レスポンシブデザイン: タブレット */
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column; /* タブレットでは縦並びに */
+        padding: 10% 1.25rem 1.25rem 1.25rem; /* 上部から10%のパディングを追加 */
+        align-items: flex-start; /* 上端揃えに変更 */
+    }
+
+    .product-details img {
+        max-width: 100%; /* 画像をコンテナの幅に合わせる */
+        margin-bottom: 1rem; /* 画像と情報の間にマージンを設定 */
+        padding: 15% 1.25rem 1.25rem 1.25rem; /* 上部から10%のパディングを追加 */
+    }
+
+    .size-select select,
+    .add-btn a {
+        width: auto; /* セレクトボックスとボタンの幅を自動調整に */
+    }
+
+    .add-btn a {
+        width: 100%; /* ボタンを幅一杯に展開 */
+        padding: 12px; /* パディングを少し大きく */
+    }
+}
+
+/* レスポンシブデザイン: スマートフォン */
+@media (max-width: 480px) {
+    .product-container {
+        padding: 1rem; /* コンテナのパディングを調整 */
+        padding: 10% 1.25rem 1.25rem 1.25rem; /* 上部から10%のパディングを追加 */
+        align-items: flex-start; /* 上端揃えに変更 */
+    }
+
+    .size-select label,
+    .add-btn a {
+        font-size: 14px; /* ラベルとボタンのフォントサイズを小さく */
+    }
+
+    .size-select select {
+        padding: 8px; /* セレクトボックスのパディングを調整 */
+    }
+
+    .comment {
+        font-size: 14px; /* コメントのフォントサイズを調整 */
+    }
+}
+
+/* カート */
+#cartItems {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1rem;
+    align-items: center;
+}
+
+.cart-item img {
+    width: 100%;
+    max-width: 8rem;
+    height: auto;
+}
+
+.cart-item-info {
+    text-align: left;
+}
+
+.cart-item-quantity {
+    width: 4rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+.remove-from-cart {
+    background-color: #ff6201;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.cart-item-price {
+    font-weight: bold;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+
+    #productList {
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    }
+
+    .product-img {
+        max-width: 20rem;
+    }
+
+    .product-title {
+        font-size: 1.5rem;
+    }
+
+    .product-price {
+        font-size: 1.25rem;
+    }
+
+    .size-select {
+        font-size: 1.5rem;
+    }
+
+    .add-btn a {
+        font-size: 2rem;
+    }
+
+    .cart-item img {
+        max-width: 6rem;
+    }
+
+    .cart-item-quantity {
+        width: 3rem;
+    }
+
+    .remove-from-cart {
+        padding: 0.25rem 0.5rem;
+    }
+}
+
+

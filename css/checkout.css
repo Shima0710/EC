@@ -1,0 +1,129 @@
+/* Google FontsからBig Shoulders Textフォントをインポート */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@400;500;600;700;800;900&display=swap');
+
+/* ルート要素で基準となるフォントサイズを指定 */
+html {
+    font-size: 16px; /* リセットのフォントサイズを指定 */
+}
+
+/* 全般のスタイル */
+* {
+    font-family: 'Big Shoulders Text', sans-serif; /* フォントファミリーを指定 */
+    padding: 0; /* パディングをリセット */
+    margin: 0; /* マージンをリセット */
+    box-sizing: border-box; /* ボックスサイジングを指定 */
+    scroll-behavior: smooth; /* スムーズスクロールを有効化 */
+    scroll-padding-top: 2rem; /* スクロール位置の調整 */
+    text-decoration: none; /* テキストの装飾を無効化 */
+    list-style: none; /* リストのマーカーを無効化 */
+}
+
+/* タイトルのスタイル */
+.title h1 {
+    font-size: 4.375rem; /* タイトルのフォントサイズを指定 */
+    margin-top: 1.25rem; /* 上部マージンを指定 */
+    color: blue; /* タイトルの色を指定 */
+    text-align: center; /* 中央揃えを指定 */
+}
+
+.title p {
+    font-size: 4.375rem; /* 段落のフォントサイズを指定 */
+    margin-top: 1.25rem; /* 上部マージンを指定 */
+    color: blue; /* 段落の色を指定 */
+    margin-left: 50%; /* 左側マージンを50%に指定 */
+    margin-right: 50%; /* 右側マージンを50%に指定 */
+}
+
+/* チェックアウトアイテムのスタイル */
+.checkout-items {
+    display: flex; /* Flexboxを有効化 */
+    flex-wrap: wrap; /* フレックスアイテムの折り返しを許可 */
+    justify-content: center; /* 中央揃えを指定 */
+    margin-top: 3.125rem; /* 上部マージンを指定 */
+}
+
+.checkout-item {
+    display: flex; /* Flexboxを有効化 */
+    flex-wrap: wrap; /* フレックスアイテムの折り返しを許可 */
+    align-items: center; /* アイテムの垂直方向の中央揃えを指定 */
+    margin: 0.625rem; /* マージンを指定 */
+}
+
+.checkout-item img {
+    margin-top: 0; /* 上部マージンをリセット */
+    width: 9.375rem; /* 画像の幅を指定 */
+}
+
+.checkout-item h2,
+.checkout-item p {
+    margin-top: 0; /* 上部マージンをリセット */
+    width: 12.5rem; /* テキストの幅を指定 */
+    flex-grow: 1; /* Flexboxで残りのスペースを均等に分配 */
+}
+
+/* カート合計のスタイル */
+.checkout-total {
+    color: rgb(0, 0, 0); /* テキストの色を指定 */
+    font-size: 2.5rem; /* フォントサイズを指定 */
+    text-align: center; /* 中央揃えを指定 */
+    margin: 0 auto; /* 左右のマージンを自動で調整して中央配置 */
+    max-width: 37.5rem; /* 最大幅を指定 */
+}
+
+/* ステップ3ボタンのスタイル */
+.step3 button {
+    margin-top: 0; /* 上部マージンをリセット */
+    margin-left: 34.375rem; /* 左マージンを指定 */
+}
+
+/* フォームのスタイル */
+form {
+    max-width: 62.5rem; /* 最大幅を指定 */
+    margin: 1.25rem auto; /* 上下左右のマージンを自動で調整して中央配置 */
+    padding: 1.25rem; /* パディングを指定 */
+    font-family: Arial, sans-serif; /* フォントファミリーを指定 */
+    display: flex; /* Flexboxを有効化 */
+    flex-direction: column; /* 縦方向に配置 */
+    align-items: center; /* アイテムの中央揃えを指定 */
+}
+
+fieldset {
+    border: none; /* ボーダーをリセット */
+    margin-bottom: 1.25rem; /* 下部マージンを指定 */
+    width: 100%; /* 幅を100%に指定 */
+    max-width: 37.5rem; /* 最大幅を指定 */
+}
+
+label {
+    display: inline-block; /* ブロック要素として表示 */
+    width: 9.375rem; /* 幅を指定 */
+    margin-bottom: 0.3125rem; /* 下部マージンを指定 */
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select {
+    width: calc(100% - 10rem); /* 幅を計算 */
+    padding: 0.625rem; /* パディングを指定 */
+    border-radius: 0.3125rem; /* ボーダーの角を丸める */
+    border: 0.0625rem solid #ccc; /* ボーダーを指定 */
+    margin-bottom: 0.625rem; /* 下部マージンを指定 */
+}
+
+button {
+    padding: 0.625rem 1.25rem; /* パディングを指定 */
+    background-color: #007bff; /* 背景色を指定 */
+    color: white; /* テキスト色を指定 */
+    border: none; /* ボーダーをリセット */
+    border-radius: 0.3125rem; /* ボーダーの角を丸める */
+    cursor: pointer; /* カーソルをポインタに変更 */
+}
+
+button:hover {
+    background-color: #0056b3; /* ホバー時の背景色を指定 */
+}
+
+.oshiharai label {
+    margin-top: 1.25rem; /* 上部マージンを指定 */
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liked Products</title>
+    <link rel="stylesheet" href="css/style.css"/>   
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/likes.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
+</head>
+<body>
+    <div id="star-background"></div> <!-- 星を描画するためのコンテナ -->
+
+    <!--header-->
+    <header>
+        <!--nav-->
+        <div class="nav container">
+            <!--logo-->
+            <a href="index.html" class="logo">HOME</a>
+            <!--navbar-->
+            <div class="navbar">
+                <a href="mihara.html" class="nav-link">MIHARAYASUHIRO</a>
+                <a href="commdes.html" class="nav-link">COMME DES GARCONS</a>
+                <a href="Needles.html" class="nav-link">NEEDLES</a>
+            </div>
+            <div class="icons">
+                <!-- Like-Icon -->
+                <a href="likes.html" id="like-icon-link">
+                    <i class='bx bx-heart' id="like-icon" data-quantity="0"></i>
+                </a>
+                <!--Cart-Icon-->
+                <a href="cart.html" id="cart-icon-link">
+                    <i class='bx bx-shopping-bag' id="cart-icon" data-quantity="0"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!--Liked Products-->
+    <section class="liked-products container">
+        <!--heading--> 
+        <h2 class="heading">Liked Products</h2>
+        <!--products container-->
+        <div class="product-container" id="liked-products"></div>
+    </section>    
+
+    <!--link to js-->
+    <script src="js/likes.js"></script>
+</body>
+</html>

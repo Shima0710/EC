@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>item</title>
+    <!-- link to css -->
+    <link rel="stylesheet" href="css/item.css"/>
+    <!-- cart Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
+</head>
+<body>
+    
+    <!-- header -->
+    <header>
+        <!-- nav -->
+        <div class="nav container">
+            <!-- logo -->
+            <a href="index.html" class="logo">HOME</a>
+            <!-- navbar -->
+            <div class="navbar">
+                <a href="mihara.html" class="nav-link">MIHARAYASUHIRO</a>
+                <a href="commdes.html" class="nav-link">COMME DES GARCONS</a>
+                <a href="Needles.html" class="nav-link">NEEDLES</a>
+            </div>
+            <div class="icons">
+                <!-- Like-Icon -->
+                <a href="likes.html" id="like-icon-link2">
+                    <i class='bx bx-heart' id="like-icon2" data-quantity="0"></i>
+                </a>
+                <!-- Cart-Icon -->
+                <a href="cart.html" id="cart-icon-link">
+                    <i class='bx bx-shopping-bag' id="cart-icon" data-quantity="0"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Product details -->
+    <section class="product-details container" id="productDetails">
+        <!-- 商品情報を表示するための要素 -->
+        <div id="productInfo"></div>
+    </section>
+   
+    <section class="products container" id="products">
+        <!--heading--> 
+        <h2 class="heading">Related Products</h2>
+        <div id="productList" class="products-container"></div>
+    
+        <!-- 関連商品を表示するための要素 -->
+        <div id="relatedProducts" class="related-products">
+        <!-- ここに関連商品が表示されます -->
+        </div>
+    </section> 
+
+
+    <script src="js/item.js"></script>
+    <script src="js/main.js"></script>
+    <!--link to js-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/slide.js"></script>
+</body>
+</html>

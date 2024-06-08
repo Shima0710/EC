@@ -1,0 +1,223 @@
+/* :rootセレクタでカラーバリアブルを定義 */
+:root {
+    --main-color: rgb(0, 0, 0); /* 主要な色を定義 */
+    --text-color: rgb(0, 0, 0); /* テキストの色を定義 */
+    --bg-color: #000000; /* 背景色を定義 */
+    --container-color: #000000; /* コンテナの色を定義 */
+}
+
+/* 全体のスタイル */
+body {
+    color: var(--text-color); /* テキストの色を変数から取得 */
+    background: var(--bg-color); /* 背景色を変数から取得 */
+}
+
+/* 画像のスタイル */
+img {
+    width: 100%; /* 画像の幅を100%に設定 */
+}
+
+/* セクションのスタイル */
+section {
+    padding: 4rem 0 2rem; /* セクションのパディングを設定 */
+}
+
+/* コンテナのスタイル */
+.container {
+    max-width: 67.188rem; /* 最大幅を1070pxから変更 */
+    margin: auto; /* 中央配置 */
+    width: 100%; /* 幅を100%に設定 */
+}
+
+/* ヘッダーのスタイル */
+header {
+    position: fixed; /* 固定位置に配置 */
+    width: 100%; /* 幅を100%に設定 */
+    top: 0; /* 上部に配置 */
+    left: 0; /* 左端に配置 */
+    z-index: 100; /* インデックスを設定 */
+}
+
+/* ナビゲーションのスタイル */
+.nav {
+    display: flex; /* Flexboxを使用 */
+    align-items: center; /* アイテムの中央揃え */
+    justify-content: space-between; /* アイテムの間隔を均等に配置 */
+    padding: 1.563rem 0; /* パディングを設定 */
+}
+
+/* メニューアイコンのスタイル */
+#menu-icon {
+    font-size: 1.75rem; /* フォントサイズを28pxから変更 */
+    cursor: pointer; /* カーソルをポインターに設定 */
+    color: var(--main-color); /* 主要な色を変数から取得 */
+    display: none; /* 非表示に設定 */
+}
+
+/* ロゴのスタイル */
+.logo {
+    font-size: 1.5rem; /* フォントサイズを設定 */
+    color: var(--main-color); /* 主要な色を変数から取得 */
+    text-transform: uppercase; /* テキストを大文字に変換 */
+    font-weight: 700; /* フォントの太さを設定 */
+}
+
+/* ナビゲーションバーのスタイル */
+.navbar {
+    display: flex; /* Flexboxを使用 */
+    align-items: center; /* アイテムの中央揃え */
+    column-gap: 0.625rem; /* カラムの間隔を設定 */
+}
+
+/* ナビゲーションリンクのスタイル */
+.nav-link {
+    font-size: 1.025rem; /* フォントサイズを設定 */
+    color: var(--main-color); /* 主要な色を変数から取得 */
+    font-weight: 700; /* フォントの太さを設定 */
+}
+/* カートアイコンのスタイル */
+#cart-icon {
+    position: relative; /* 相対位置に配置 */
+    font-size: 1.8rem; /* フォントサイズを設定 */
+    color: var(--main-color); /* 主要な色を変数から取得 */
+    cursor: pointer; /* カーソルをポインターに設定 */
+}
+
+/* カートアイコンに表示する数量のスタイル */
+#cart-icon[data-quantity="0"]::after {
+    content: ""; /* コンテンツを空に設定 */
+}
+
+#cart-icon[data-quantity]::after {
+    content: attr(data-quantity); /* カート数量を表示 */
+    position: absolute; /* 絶対位置に配置 */
+    top: -5px; /* 上部に配置 */
+    right: -10px; /* 右端に配置 */
+    width: 1.25rem; /* 幅を設定 */
+    height: 1.25rem; /* 高さを設定 */
+    background: var(--main-color); /* 主要な色を変数から取得 */
+    border-radius: 50%; /* 角を丸める */
+    color: #ffffff; /* テキストの色を設定 */
+    font-size: 0.75rem; /* フォントサイズを設定 */
+    font-weight: 500; /* フォントの太さを設定 */
+    display: flex; /* Flexboxを使用 */
+    align-items: center; /* アイテムの中央揃え */
+    justify-content: center; /* アイテムの中央揃え */
+}
+
+/* いいねアイコンのスタイル */
+#like-icon {
+    position: relative; /* 相対位置に配置 */
+    font-size: 1.8rem; /* フォントサイズを設定 */
+    color: var(--main-color); /* 主要な色を変数から取得 */
+    cursor: pointer; /* カーソルをポインターに設定 */
+}
+
+/* いいねアイコンに表示する数量のスタイル */
+#like-icon[data-quantity="0"]::after {
+    content: ""; /* コンテンツを空に設定 */
+}
+
+#like-icon[data-quantity]::after {
+    content: attr(data-quantity); /* いいね数量を表示 */
+    position: absolute; /* 絶対位置に配置 */
+    top: -10px; /* 上部に配置 */
+    right: -10px; /* 右端に配置 */
+    width: 1.25rem; /* 幅を設定 */
+    height: 1.25rem; /* 高さを設定 */
+    background: #000000; /* 主要な色を変数から取得 */
+    border-radius: 50%; /* 角を丸める */
+    color: #ffffff; /* テキストの色を設定 */
+    font-size: 0.75rem; /* フォントサイズを設定 */
+    font-weight: 500; /* フォントの太さを設定 */
+    display: flex; /* Flexboxを使用 */
+    align-items: center; /* アイテムの中央揃え */
+    justify-content: center; /* アイテムの中央揃え */
+}
+
+/* ホームセクションのスタイル */
+.home {
+    position: relative; /* 相対位置に配置 */
+    background: none; /* 背景を透明に設定 */
+    min-height: 37.5rem; /* 最小の高さを設定 */
+}
+
+/* ホームイメージ2のスタイル */
+.home-img2 {
+    width: 100%; /* 幅を100%に設定 */
+    position: absolute; /* 絶対位置に配置 */
+    top: 31.25rem; /* 上部の位置を設定 */
+    bottom: 0; /* 下部の位置を設定 */
+    left: 50%; /* 左端の位置を50%に設定 */
+    transform: translateX(-50%); /* 水平方向に中央揃え */
+    display: flex; /* Flexboxを使用 */
+    justify-content: center; /* アイテムの中央揃え */
+}
+
+/* ホームイメージ2の前景テキストのスタイル */
+.home-img2::before {
+    content: "COMME DES GARCONS"; /* テキストのコンテンツを設定 */
+    font-size: 6rem; /* フォントサイズを設定 */
+    font-weight: 900; /* フォントの太さを設定 */
+    text-transform: uppercase; /* テキストを大文字に変換 */
+    position: absolute; /* 絶対位置に配置 */
+    text-align: center; /* 中央揃えを設定 */
+    margin-top: -25vh; /* 上部の位置を設定 */
+    color: rgb(0, 0, 0); /* テキストの色を設定 */
+    z-index: 10; /* インデックスを設定 */
+}
+
+/* 商品タイトルのリンクのスタイル */
+.product-title a {
+    color: var(--text-color); /* テキストの色を取得 */
+    cursor: pointer; /* ポインターイベントを有効化 */
+}
+
+
+
+/* home-img */
+
+/* 768px以下のデバイス向けスタイル */
+@media (max-width: 768px) {
+    .home-img2::before {
+        font-size: 5rem; /* タブレットサイズでのフォントサイズ縮小 */
+        top: 55%; /* 位置調整 */
+    }
+}
+
+/* 560px以下のデバイス向けスタイル */
+@media (max-width: 560px) {
+    .home-img2::before {
+        font-size: 3rem; /* スマートフォンサイズでのフォントサイズ縮小 */
+        top: 50%; /* より中心に位置調整 */
+    }
+}
+
+
+/* 背景星 */
+#star-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* 背景のため他のコンテンツの後ろに */
+    overflow: hidden; /* はみ出した星を非表示に */
+    background: #ffffff; /* 背景色を黒に */
+  }
+  
+  .star {
+    position: absolute;
+    background: #000000;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  }
+  
+    /* CSSで星のアニメーションを追加 */
+    @keyframes twinkle {
+      0% { opacity: 0.3; }
+      100% { opacity: 1; }
+      }
+      
+  
+  

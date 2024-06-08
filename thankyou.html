@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        .logo{
+            font-size: 1.5rem;
+            color: var(--main-color);
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .center-text {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="logo">HOME</a>
+    <div class="center-text">
+        <h1>ご注文ありがとうございます！</h1>
+        <p>注文が受け付けられました。商品のお届けまでお待ちください。</p>
+    </div>
+    
+    <script>
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 5000); // 5000ミリ秒（5秒）後にindex.htmlへ遷移
+    </script>
+</body>
+</html>

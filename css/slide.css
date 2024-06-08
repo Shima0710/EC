@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+.slider {
+    width: 94%; /* 横幅を94%に設定して左右に余白を持たせて中央寄せ */
+    margin: 10% auto; /* 左右の余白を自動で設定して中央寄せ */
+}
+
+.slider img {
+    width: 30rem; /* 幅を30remに設定 */
+    height: 25rem; /* 高さを25remに設定 */
+    margin-top: 1rem; /* 余白の調整 */
+}
+
+
+.slider .slick-slide {
+    margin: 0 0.625rem; /* 10px を rem に変換 */
+}
+
+.slick-prev,
+.slick-next {
+    position: absolute; /* 絶対位置に配置 */
+    top: 55%; /* 上端からの位置を設定 */
+    cursor: pointer; /* ポインターを指定 */
+    outline: none; /* アウトラインを非表示にする */
+    border-top: 0.125rem solid rgb(255, 255, 255); /* 矢印の色を設定 */
+    border-right: 0.125rem solid rgb(255, 255, 255); /* 矢印の色を設定 */
+    height: 1.25rem; /* 高さを設定 */
+    width: 1.25rem; /* 幅を設定 */
+}
+
+.slick-prev {
+    left: -1.5%; /* 左端からの位置を設定 */
+    transform: rotate(-135deg); /* 回転角度を指定 */
+}
+
+.slick-next {
+    right: -1.5%; /* 右端からの位置を設定 */
+    transform: rotate(45deg); /* 回転角度を指定 */
+}
+
+.slick-dots {
+    text-align: center; /* テキストを中央揃え */
+    margin-top: 1.25rem; /* 上部からのマージンを設定 */
+}
+
+.slick-dots li {
+    display: inline-block; /* インラインブロック要素として表示 */
+    margin: 0 0.3125rem; /* 左右のマージンを設定 */
+}
+
+.slick-dots button {
+    color: transparent; /* テキストを透明にする */
+    outline: none; /* アウトラインを非表示にする */
+    width: 0.5rem; /* 幅を設定 */
+    height: 0.5rem; /* 高さを設定 */
+    display: block; /* ブロック要素として表示 */
+    border-radius: 50%; /* 角丸を設定 */
+    background: rgb(82, 82, 82); /* 背景色を設定 */
+}
+
+.slick-dots .slick-active button {
+    background: #ffffff; /* アクティブなドットの背景色を設定 */
+}

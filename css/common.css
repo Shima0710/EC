@@ -1,0 +1,349 @@
+/* Google Fontをインポート */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@400;500;600;700;800;900&display=swap');
+
+/* リセットと一般的なスタイル */
+* {
+    font-family: 'Big Shoulders Text', sans-serif; /* フォントファミリーを指定 */
+    padding: 0; /* パディングをリセット */
+    margin: 0; /* マージンをリセット */
+    box-sizing: border-box; /* ボックスサイジングを指定 */
+    scroll-behavior: smooth; /* スムーズスクロールを有効化 */
+    scroll-padding-top: 2rem; /* スクロール位置の調整 */
+    text-decoration: none; /* テキストの装飾を無効化 */
+    list-style: none; /* リストのマーカーを無効化 */
+}
+
+.fade-out {
+    transition: opacity 0.6s ease-out;
+    opacity: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+/* ボディのスタイル */
+body {
+    color: var(--text-color); /* テキストの色を変数から取得 */
+    background: var(--bg-color); /* 背景色を変数から取得 */
+}
+
+
+/* 画像のスタイル */
+img {
+    width: 100%; /* 幅を100%に設定 */
+}
+
+/* セクションのスタイル */
+section {
+    padding: 4rem 0 2rem; /* パディングを設定 */
+}
+
+/* コンテナのスタイル */
+.container {
+    max-width: 67.188rem; /* 最大幅を1070pxから変更 */
+    margin: auto; /* 中央配置 */
+    width: 100%; /* 幅を100%に設定 */
+}
+
+/* ヘッダーのスタイル */
+header {
+    position: fixed; /* 固定位置に配置 */
+    width: 100%; /* 幅を100%に設定 */
+    top: 0; /* 上端に配置 */
+    left: 0; /* 左端に配置 */
+    z-index: 100; /* インデックスを設定 */
+}
+
+/* Google Fontをインポート */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@400;500;600;700;800;900&display=swap');
+
+/* リセットと一般的なスタイル */
+* {
+    font-family: 'Big Shoulders Text', sans-serif; /* フォントファミリーを指定 */
+    padding: 0; /* パディングをリセット */
+    margin: 0; /* マージンをリセット */
+    box-sizing: border-box; /* ボックスサイジングを指定 */
+    scroll-behavior: smooth; /* スムーズスクロールを有効化 */
+    scroll-padding-top: 2rem; /* スクロール位置の調整 */
+    text-decoration: none; /* テキストの装飾を無効化 */
+    list-style: none; /* リストのマーカーを無効化 */
+}
+
+.fade-out {
+    transition: opacity 0.6s ease-out;
+    opacity: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+/* ボディのスタイル */
+body {
+    color: var(--text-color); /* テキストの色を変数から取得 */
+    background: var(--bg-color); /* 背景色を変数から取得 */
+}
+
+
+/* 画像のスタイル */
+img {
+    width: 100%; /* 幅を100%に設定 */
+}
+
+/* セクションのスタイル */
+section {
+    padding: 4rem 0 2rem; /* パディングを設定 */
+}
+
+/* コンテナのスタイル */
+.container {
+    max-width: 67.188rem; /* 最大幅を1070pxから変更 */
+    margin: auto; /* 中央配置 */
+    width: 100%; /* 幅を100%に設定 */
+}
+
+/* ヘッダーのスタイル */
+header {
+    position: fixed; /* 固定位置に配置 */
+    width: 100%; /* 幅を100%に設定 */
+    top: 0; /* 上端に配置 */
+    left: 0; /* 左端に配置 */
+    z-index: 100; /* インデックスを設定 */
+}
+
+/* ナビゲーションのスタイル */
+.nav {
+    display: flex; /* Flexboxを使用 */
+    align-items: center; /* アイテムの中央揃え */
+    justify-content: space-between; /* アイテムの間隔を均等に配置 */
+    padding: 1.563rem 0; /* パディングを設定 */
+}
+
+/* ロゴのスタイル */
+.logo {
+    font-size: 1.5rem; /* フォントサイズを設定 */
+    color: var(--main-color); /* 主要な色を変数から取得 */
+    text-transform: uppercase; /* テキストを大文字に変換 */
+    font-weight: 700; /* フォントの太さを設定 */
+}
+
+/* ナビゲーションバーのスタイル */
+.navbar {
+    display: flex; /* Flexboxを使用 */
+    align-items: center; /* アイテムの中央揃え */
+    column-gap: 1rem; /* カラムの間隔を設定 */
+}
+
+/* ナビゲーションリンクのスタイル */
+.nav-link {
+    font-size: 1.025rem; /* フォントサイズを設定 */
+    color: var(--main-color); /* 主要な色を変数から取得 */
+    font-weight: 700; /* フォントの太さを設定 */
+}
+
+/* メニューアイコンのスタイル */
+#menu-icon {
+    font-size: 1.75rem; /* フォントサイズを設定 */
+    cursor: pointer; /* カーソルをポインターに設定 */
+    color: var(--main-color); /* 主要な色を変数から取得 */
+    display: none; /* 非表示に設定 */
+}
+/* いいねアイコンのスタイル */
+#like-icon-link {
+    margin-right: 1rem; /* アイコンの間隔を調整 */
+    display: inline-block;
+    color: #ff6201; /* アイコンの色 */
+}
+
+#like-icon {
+    font-size: 24px; /* アイコンのサイズを調整 */
+}
+
+/* アイコンのスタイル */
+.icons i {
+    font-size: 24px;
+    color: #ff6201; /* オレンジ色に設定 */
+    margin-left: 10px;
+    position: relative;
+}
+
+/* アイコンのスタイル */
+.icons i {
+    font-size: 24px;
+    color: #ff6201; /* オレンジ色に設定 */
+    margin-left: 10px;
+    position: relative;
+}
+
+
+/* ラッパーのスタイル */
+#wrapper {
+    position: relative; /* 相対位置に配置 */
+    z-index: 1; /* インデックスを設定 */
+    width: 100%; /* 幅を100%に設定 */
+    height: 100%; /* 高さを100%に設定 */
+}
+
+/* タイトルのスタイル */
+.heading {
+    font-size: 4rem; /* フォントサイズを設定 */
+    font-weight: 900; /* フォントの太さを設定 */
+    text-transform: uppercase; /* テキストを大文字に変換 */
+    text-align: center; /* 中央揃えを設定 */
+    margin-top: 1.25rem; /* 上部マージンを設定 */
+}
+
+/* 商品コンテナのスタイル */
+.product-container {
+    display: grid; /* グリッドを使用 */
+    grid-template-columns: repeat(4, 1fr); /* 列の数と幅を設定 */
+    gap: 0.625rem; /* グリッド間の間隔を設定 */
+    margin: 3.125rem; /* マージンを設定 */
+}
+
+/* 商品画像のスタイル */
+.product-img {
+    width: 100%; /* 幅を100%に設定 */
+    height: 21.875rem; /* 高さを設定 */
+    object-fit: cover; /* 画像をカバーするように設定 */
+}
+
+/* 商品タイトルのスタイル */
+.product-title {
+    font-size: 1.25rem; /* フォントサイズを設定 */
+    font-weight: 600; /* フォントの太さを設定 */
+    margin: 0.8rem 0 0.5rem; /* マージンを設定 */
+}
+
+/* 商品のimg、titleなどのレスポンス */
+/* 768px以下のデバイスのスタイル */
+@media (max-width: 768px) {
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-img {
+        max-width: 80%; /* 画像の最大幅を80%に設定 */
+    }
+
+    .product-info {
+        width: 100%; /* 情報ブロックを親コンテナの100%の幅に */
+    }
+
+    .product-title {
+        font-size: 1.2rem; /* タイトルのフォントサイズを大きく */
+    }
+
+    .product-price {
+        font-size: 1.2rem;
+    }
+}
+
+/* 560px以下のデバイスのスタイル */
+@media (max-width: 560px) {
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-img {
+        max-width: 100%; /* 画像の最大幅を親コンテナの100%に */
+    }
+
+    .product-info {
+        width: 100%;
+    }
+
+    .product-title {
+        font-size: 1rem; /* タイトルのフォントサイズを再調整 */
+    }
+
+    .product-price {
+        font-size: 1rem;
+    }
+}
+
+
+/* ラッパーのスタイル */
+#wrapper {
+    position: relative; /* 相対位置に配置 */
+    z-index: 1; /* インデックスを設定 */
+    width: 100%; /* 幅を100%に設定 */
+    height: 100%; /* 高さを100%に設定 */
+}
+
+/* タイトルのスタイル */
+.heading {
+    font-size: 4rem; /* フォントサイズを設定 */
+    font-weight: 900; /* フォントの太さを設定 */
+    text-transform: uppercase; /* テキストを大文字に変換 */
+    text-align: center; /* 中央揃えを設定 */
+    margin-top: 1.25rem; /* 上部マージンを設定 */
+}
+
+/* 商品コンテナのスタイル */
+.product-container {
+    display: grid; /* グリッドを使用 */
+    grid-template-columns: repeat(4, 1fr); /* 列の数と幅を設定 */
+    gap: 0.625rem; /* グリッド間の間隔を設定 */
+    margin: 3.125rem; /* マージンを設定 */
+}
+
+/* 商品画像のスタイル */
+.product-img {
+    width: 100%; /* 幅を100%に設定 */
+    height: 21.875rem; /* 高さを設定 */
+    object-fit: cover; /* 画像をカバーするように設定 */
+}
+
+/* 商品タイトルのスタイル */
+.product-title {
+    font-size: 1.25rem; /* フォントサイズを設定 */
+    font-weight: 600; /* フォントの太さを設定 */
+    margin: 0.8rem 0 0.5rem; /* マージンを設定 */
+}
+
+/* 商品のimg、titleなどのレスポンス */
+/* 768px以下のデバイスのスタイル */
+@media (max-width: 768px) {
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-img {
+        max-width: 80%; /* 画像の最大幅を80%に設定 */
+    }
+
+    .product-info {
+        width: 100%; /* 情報ブロックを親コンテナの100%の幅に */
+    }
+
+    .product-title {
+        font-size: 1.2rem; /* タイトルのフォントサイズを大きく */
+    }
+
+    .product-price {
+        font-size: 1.2rem;
+    }
+}
+
+/* 560px以下のデバイスのスタイル */
+@media (max-width: 560px) {
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-img {
+        max-width: 100%; /* 画像の最大幅を親コンテナの100%に */
+    }
+
+    .product-info {
+        width: 100%;
+    }
+
+    .product-title {
+        font-size: 1rem; /* タイトルのフォントサイズを再調整 */
+    }
+
+    .product-price {
+        font-size: 1rem;
+    }
+}

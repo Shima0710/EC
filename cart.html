@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <!-- link to css -->
+    <link rel="stylesheet" href="css/cart.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <!-- cart Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <!-- nav -->
+        <div class="nav container">
+            <!-- logo -->
+            <a href="index.html" class="logo">HOME</a>
+            <!-- navbar -->
+            <div class="navbar">
+                <a href="mihara.html" class="nav-link">MIHARAYASUHIRO</a>
+                <a href="commdes.html" class="nav-link">COMME DES GARCONS</a>
+                <a href="Needles.html" class="nav-link">NEEDLES</a>
+            </div>
+            <!-- Cart-Icon -->
+            <a href="cart.html"id="cart-icon-link">
+                <i class='bx bx-shopping-bag' id="cart-icon" data-quantity="0"></i>
+            </a> 
+        </div>
+    </header>
+    
+    <!-- cart -->
+    <section class="cart-container container">
+       
+        <h2 class="cart-s-title">Shopping Cart</h2>
+        <div class="cart-box">
+            <div class="cart-data">
+                <div id="cartItems"></div>     
+            </div>   
+            <div class="cart-t">
+                <div id="cartTotal"></div>
+                <a href="checkout.html" class="checkout-btn">お会計</a>
+            </div>
+        </div>
+    </section>
+    <!--link js-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/item.js"></script>
+    <script src="js/slide.js"></script>
+</body>
+</html>

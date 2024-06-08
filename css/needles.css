@@ -1,0 +1,251 @@
+:root {
+    --main-color: rgb(255, 255, 255); /* メインの色を指定 */
+    --text-color: rgb(255, 255, 255); /* テキストの色を指定 */
+}
+
+body {
+    color: var(--text-color); /* テキストの色を変数から取得 */
+    background: var(--bg-color); /* 背景色を変数から取得 */
+}
+
+img {
+    width: 100%; /* 幅を100%に設定 */
+}
+
+section {
+    padding: 4rem 0 2rem; /* パディングを設定 */
+}
+
+.container {
+    max-width: 67.188rem; /* 最大幅を1070pxから変更 */
+    margin: auto; /* 中央配置 */
+    width: 100%; /* 幅を100%に設定 */
+}
+
+header {
+    position: fixed; /* 固定位置に配置 */
+    width: 100%; /* 幅を100%に設定 */
+    top: 0; /* 上端に配置 */
+    left: 0; /* 左端に配置 */
+    z-index: 100; /* インデックスを設定 */
+}
+
+.nav {
+    display: flex; /* Flexboxを使用 */
+    align-items: center; /* アイテムの中央揃え */
+    justify-content: space-between; /* アイテムの間隔を均等に配置 */
+    padding: 1.563rem 0; /* パディングを設定 */
+}
+
+#menu-icon {
+    font-size: 28px; /* フォントサイズを設定 */
+    cursor: pointer; /* カーソルをポインターに設定 */
+    color: var(--main-color); /* 主要な色を変数から取得 */
+    display: none; /* 非表示 */
+}
+
+.logo {
+    font-size: 1.5rem; /* フォントサイズを設定 */
+    color: var(--main-color); /* 主要な色を変数から取得 */
+    text-transform: uppercase; /* テキストを大文字に変換 */
+    font-weight: 700; /* フォントの太さを設定 */
+}
+
+.navbar {
+    display: flex; /* Flexboxを使用 */
+    align-items: center; /* アイテムの中央揃え */
+    column-gap: 1rem; /* カラムの間隔を設定 */
+    -webkit-text-stroke: 0.05px #FF0000; /* テキストの輪郭を設定 */
+}
+
+.nav-link {
+    font-size: 1.025rem; /* フォントサイズを設定 */
+    color: var(--main-color); /* 主要な色を変数から取得 */
+    font-weight: 700; /* フォントの太さを設定 */
+}
+/* カートアイコンのスタイル */
+#cart-icon {
+    position: relative; /* 相対位置に配置 */
+    font-size: 1.8rem; /* フォントサイズを設定 */
+    color: var(--main-color); /* 主要な色を変数から取得 */
+    cursor: pointer; /* カーソルをポインターに設定 */
+}
+
+/* カートアイコンに表示する数量のスタイル */
+#cart-icon[data-quantity="0"]::after {
+    content: ""; /* コンテンツを空に設定 */
+}
+
+#cart-icon[data-quantity]::after {
+    content: attr(data-quantity); /* カート数量を表示 */
+    position: absolute; /* 絶対位置に配置 */
+    top: -5px; /* 上部に配置 */
+    right: -10px; /* 右端に配置 */
+    width: 1.25rem; /* 幅を設定 */
+    height: 1.25rem; /* 高さを設定 */
+    background: #373369; /* 主要な色を変数から取得 */
+    border-radius: 50%; /* 角を丸める */
+    color: #ffffff; /* テキストの色を設定 */
+    font-size: 0.75rem; /* フォントサイズを設定 */
+    font-weight: 500; /* フォントの太さを設定 */
+    display: flex; /* Flexboxを使用 */
+    align-items: center; /* アイテムの中央揃え */
+    justify-content: center; /* アイテムの中央揃え */
+}
+
+/* いいねアイコンのスタイル */
+#like-icon {
+    position: relative; /* 相対位置に配置 */
+    font-size: 1.8rem; /* フォントサイズを設定 */
+    color: var(--main-color); /* 主要な色を変数から取得 */
+    cursor: pointer; /* カーソルをポインターに設定 */
+    z-index: 999;
+}
+
+/* いいねアイコンに表示する数量のスタイル */
+#like-icon[data-quantity="0"]::after {
+    content: ""; /* コンテンツを空に設定 */
+}
+
+#like-icon[data-quantity]::after {
+    content: attr(data-quantity); /* いいね数量を表示 */
+    position: absolute; /* 絶対位置に配置 */
+    top: -10px; /* 上部に配置 */
+    right: -10px; /* 右端に配置 */
+    width: 1.25rem; /* 幅を設定 */
+    height: 1.25rem; /* 高さを設定 */
+    background: #373369; /* 主要な色を変数から取得 */
+    border-radius: 50%; /* 角を丸める */
+    color: #ffffff; /* テキストの色を設定 */
+    font-size: 0.75rem; /* フォントサイズを設定 */
+    font-weight: 500; /* フォントの太さを設定 */
+    display: flex; /* Flexboxを使用 */
+    align-items: center; /* アイテムの中央揃え */
+    justify-content: center; /* アイテムの中央揃え */
+}
+
+
+/* ホーム画像 */
+.home3 {
+    position: relative; /* 相対位置に配置 */
+    background: none; /* 背景を透明に設定 */
+    min-height: 37.5rem; /* 最小の高さを設定 */
+}
+
+.home-img3 {
+    width: 100%; /* 幅を100%に設定 */
+    position: absolute; /* 絶対位置に配置 */
+    top: 15.25rem; /* 上部の位置を設定 */
+    bottom: 0; /* 下部の位置を設定 */
+    left: 50%; /* 左端の位置を50%に設定 */
+    transform: translateX(-50%); /* 水平方向に中央揃え */
+    display: flex; /* Flexboxを使用 */
+    justify-content: center; /* アイテムの中央揃え */
+}
+
+.home-img3 img {
+    max-width: 400px; /* 最大幅を設定 */
+    width: 60%; /* 幅を設定 */
+    position: absolute; /* 絶対位置に配置 */
+    top: -70px; /* 上端からの位置を設定 */
+    left: 50%; /* 左端を50%に設定 */
+    transform: translateX(-50%); /* 中央揃え */
+}
+
+.home-img3::before {
+    content: " NeeDles"; /* コンテンツを表示 */
+    font-size: 13rem; /* フォントサイズを設定 */
+    font-weight: 900; /* フォントの太さを設定 */
+    text-transform: uppercase; /* テキストを大文字に変換 */
+    position: absolute; /* 絶対位置に配置 */
+    text-align: center; /* テキストを中央揃え */
+    color: rgb(246, 255, 0); /* 色を指定 */
+    -webkit-text-stroke: 6px rgb(113, 72, 144); /* テキストの輪郭を指定 */
+    z-index: 10; /* インデックスを設定 */
+} 
+
+.heading {
+    font-size: 4rem; /* フォントサイズを設定 */
+    font-weight: 900; /* フォントの太さを設定 */
+    text-transform: uppercase; /* テキストを大文字に変換 */
+    text-align: center; /* テキストを中央揃え */
+}
+
+.product-container {
+    display: grid; /* グリッドを使用 */
+    grid-template-columns: repeat(4, 1fr); /* グリッドの列数と幅を設定 */
+    gap: 1rem; /* グリッドの間隔を設定 */
+    margin: 50px; /* マージンを設定 */
+}
+
+.product-img {
+    width: 100%; /* 幅を100%に設定 */
+    height: 350px; /* 高さを設定 */
+    object-fit: cover; /* 画像をカバーするように設定 */
+}
+
+.product-title {
+    font-size: 1.25rem; /* フォントサイズを設定 */
+    font-weight: 600; /* フォントの太さを設定 */
+    margin: 0.8rem 0 0.5rem; /* マージンを設定 */
+}
+
+.product-title a {
+    color: rgb(255, 255, 255); /* 色を指定 */
+    cursor: pointer; /* ポインターイベントを有効化 */
+}
+
+
+#wrapper {
+    position: relative; /* 相対位置に配置 */
+    z-index: 1; /* インデックスを設定 */
+    width: 100%; /* 幅を100%に設定 */
+    height: 100%; /* 高さを100%に設定 */
+}
+
+
+/* 768px以下のデバイス向けスタイル */
+@media (max-width: 768px) {
+    .home-img3::before {
+        font-size: 6rem; /* タブレットサイズでのフォントサイズ縮小 */
+        top: 55%; /* 位置調整 */
+    }
+}
+
+/* 560px以下のデバイス向けスタイル */
+@media (max-width: 560px) {
+    .home-img3::before {
+        font-size: 5rem; /* スマートフォンサイズでのフォントサイズ縮小 */
+        top: 50%; /* より中心に位置調整 */
+    }
+}
+
+
+
+/* 背景星 */
+#star-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* 背景のため他のコンテンツの後ろに */
+    overflow: hidden; /* はみ出した星を非表示に */
+    background: #000000; /* 背景色を黒に */
+  }
+  
+  .star {
+    position: absolute;
+    background: #5a31a7;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 242, 0, 0.8);
+  }
+  
+    /* CSSで星のアニメーションを追加 */
+    @keyframes twinkle {
+      0% { opacity: 0.3; }
+      100% { opacity: 1; }
+      }
+      
+  
+  
